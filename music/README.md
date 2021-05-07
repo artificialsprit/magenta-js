@@ -1,6 +1,6 @@
 # To-do
 
-1. save model.json
+1. save model.json like [https://storage.googleapis.com/magentadata/js/checkpoints/ddsp/violin/model.json](https://storage.googleapis.com/magentadata/js/checkpoints/ddsp/violin/model.json) and [link](https://github.com/artificialsprit/magenta-js/tree/master/music/src/ddsp)
 2. upload somewhere
 3. edit demos/ddsp_tone_transfer.ts/toneTransfer2 with weight
 
