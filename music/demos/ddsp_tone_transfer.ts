@@ -24,6 +24,7 @@ enum MODEL {
   TENOR_SAXOPHONE = 'tenor_saxophone',
   TRUMPET = 'trumpet',
   FLUTE = 'flute',
+  PJY_dolphin = 'pjy_dolphin',
 }
 
 const PRESET_MODEL_URL =
@@ -125,6 +126,29 @@ window.onload = () => {
         .addEventListener(
             'click',
             () => toneTransfer(`${PRESET_MODEL_URL}/${MODEL.TRUMPET}`));
+    document.getElementById('button_dolphin')
+            .addEventListener(
+                'click',
+                () => toneTransfer2(`dataset_statistics.pkl`));//${PRESET_MODEL_URL}/${MODEL.TRUMPET}
+  }
+
+  async function toneTransfer2(
+      checkpointUrl: string,
+      settings?: ModelValues,
+  ) {
+    document.getElementById('player').style.display = 'none';
+    const ddsp = new mm.DDSP(checkpointUrl, settings);
+    await ddsp.initialize();
+    const toneTransferredAudioData: Float32Array =
+        await ddsp.synthesize(audioFeatures);
+
+    document.getElementById('player').style.display = 'block';
+    const dataview = encodeWAV(toneTransferredAudioData, audioCtx.sampleRate);
+    const blob = new Blob([dataview], {type: 'audio/wav'}),
+          url = window.URL.createObjectURL(blob);
+    (document.getElementById('player') as HTMLAudioElement).src = url;
+
+    ddsp.dispose();
   }
 
   async function toneTransfer(
@@ -145,6 +169,7 @@ window.onload = () => {
 
     ddsp.dispose();
   }
+
 
   function printJSONObj(elementId: string, obj: AudioFeatures) {
     const element = document.getElementById(elementId);

@@ -8,28 +8,33 @@ Complete API documentation is available [here](https://magenta.github.io/magenta
 
 # Table of Contents
 
-- [Getting started](#getting-started)
-- [Usage](#usage)
-  - [In the browser](#in-the-browser)
-  - [In Node](#in-node)
-- [API docs](https://magenta.github.io/magenta-js/music)
-- [Supported Models](#supported-models)
-  - [Onsets and Frames](#piano-transcription-w-onsets-and-frames)
-  - [MusicRNN](#musicrnn)
-  - [MusicVAE](#musicvae)
-  - [MidiMe](#midime)
-  - [Piano Genie](#piano-genie)
-  - [GANSynth](#gansynth)
-  - [SPICE](#spice)
-  - [DDSP](#ddsp)
-- [Model Checkpoints](#model-checkpoints)
-  - [Pre-trained hosted checkpoints](#pre-trained-hosted-checkpoints)
-  - [Your own checkpoints](#your-own-checkpoints)
-- [Soundfonts](#soundfonts)
-- [How To](#how-to)
-  - [Use with a WebWorker](#use-with-a-web-worker)
-  - [Use with a ServiceWorker](#use-with-a-service-worker)
-  - [Use with TypeScript](#use-with-typescript)
+- [@magenta/music](#magentamusic)
+- [Table of Contents](#table-of-contents)
+  - [Getting started](#getting-started)
+  - [Usage](#usage)
+    - [In the browser](#in-the-browser)
+    - [In Node](#in-node)
+      - [Example Commands for yarn](#example-commands-for-yarn)
+      - [Example Commands for npm](#example-commands-for-npm)
+  - [Supported Models](#supported-models)
+    - [Piano Transcription w/ Onsets and Frames](#piano-transcription-w-onsets-and-frames)
+    - [MusicRNN](#musicrnn)
+    - [MusicVAE](#musicvae)
+    - [MidiMe](#midime)
+    - [Piano Genie](#piano-genie)
+    - [GANSynth](#gansynth)
+    - [SPICE](#spice)
+    - [DDSP](#ddsp)
+  - [Model Checkpoints](#model-checkpoints)
+    - [Pre-trained hosted checkpoints](#pre-trained-hosted-checkpoints)
+    - [Your own checkpoints](#your-own-checkpoints)
+      - [Dumping your weights](#dumping-your-weights)
+      - [Specifying the Model Configuration](#specifying-the-model-configuration)
+  - [SoundFonts](#soundfonts)
+  - [How Tos](#how-tos)
+    - [Use with a WebWorker](#use-with-a-webworker)
+    - [Use with a ServiceWorker](#use-with-a-serviceworker)
+    - [Use with TypeScript](#use-with-typescript)
 
 ## Getting started
 If you want to get hands-on with Magenta, we've put together a small
@@ -113,7 +118,7 @@ model
   });
 ```
 
-#### Example Commands
+#### Example Commands for yarn
 `yarn install` to install dependencies.
 
 `yarn test` to run tests.
@@ -123,6 +128,13 @@ model
 `yarn run-demos` to build and serve the demos, with live reload.
 
 *(Note: the default behavior is to build/watch all demos - specific demos can be built by passing a comma-separated list of specific demo names as follows: `yarn run-demos --demos=transcription,visualizer`)*
+
+#### Example Commands for npm
+`npm install`
+
+`npm run build`
+
+`npm run run-demos`
 
 ## Supported Models
 
