@@ -1,3 +1,9 @@
+# To-do
+
+1. save model.json
+2. upload somewhere
+3. edit demos/ddsp_tone_transfer.ts/toneTransfer2 with weight
+
 # @magenta/music
 
 [![npm version](https://badge.fury.io/js/%40magenta%2Fmusic.svg)](https://badge.fury.io/js/%40magenta%2Fmusic) [![](https://data.jsdelivr.com/v1/package/npm/@magenta/music/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@magenta/music)
@@ -8,6 +14,7 @@ Complete API documentation is available [here](https://magenta.github.io/magenta
 
 # Table of Contents
 
+- [To-do](#to-do)
 - [@magenta/music](#magentamusic)
 - [Table of Contents](#table-of-contents)
   - [Getting started](#getting-started)
