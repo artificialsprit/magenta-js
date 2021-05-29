@@ -4,6 +4,15 @@
 2. upload somewhere
 3. edit demos/ddsp_tone_transfer.ts/toneTransfer2 with weight
 
+# ckpt to json and bin
+
+1. put ``ckpt-30000.data-00000-of-00001`` and ``ckpt-30000.index`` at ``.``.
+2. install ``pip install tensorflowjs``
+3. 
+```
+python ../scripts/checkpoint_converter.py ckpt-30000 .
+```
+
 # @magenta/music
 
 [![npm version](https://badge.fury.io/js/%40magenta%2Fmusic.svg)](https://badge.fury.io/js/%40magenta%2Fmusic) [![](https://data.jsdelivr.com/v1/package/npm/@magenta/music/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@magenta/music)
