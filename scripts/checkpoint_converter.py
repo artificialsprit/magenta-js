@@ -61,12 +61,14 @@ def dump_checkpoint(
     entries.append({'name': var_name, 'data': tensor})
     print('Dumping %s (%r)' %  (var_name, shape))
 
-  write_weights(
-    [entries],
-    output_dir,
-    write_manifest=True,
-    quantization_dtype=quantization_dtype,
-    shard_size_bytes=shard_mb * 1024 * 1024)
+#   write_weights(
+#     [entries],
+#     output_dir,
+#     write_manifest=True,
+#     quantization_dtype=quantization_dtype,
+#     shard_size_bytes=shard_mb * 1024 * 1024)
+  write_weights([entries], output_dir, shard_size_bytes=shard_mb * 1024 * 1024, write_manifest=True, quantization_dtype_map=quantization_dtype)
+
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
